@@ -1,65 +1,38 @@
-# Josiah & Sons Plumbing - Luxury Service Platform
+# Josiah & Sons Plumbing | Premium Digital Experience
 
-A high-end, conversion-focused digital presence for **Josiah & Sons Plumbers**. Built with cutting-edge technologies to deliver a premium user experience and robust performance.
+## 💎 Overview
+Josiah & Sons Plumbing is a high-performance, mobile-first web application designed to reflect the excellence and reliability of a premier Houston plumbing service. Built with a focus on **Core Web Vitals**, **Premium UI/UX**, and **Responsive GSAP Orchestration**, this site provides a seamless experience across all device ranges.
 
-## 🌟 Features
+## 🚀 Performance Engineering
+- **LCP Optimization**: Strategic asset loading (`loading="eager"` for hero images) and preconnected font origins.
+- **Adaptive GSAP Architecture**: Conditionally handled ScrollTrigger animations to prevent mobile jank while maintaining desktop immersion.
+- **Micro-Interactions**: GPU-optimized transitions and HSL-based color palettes for a smooth, high-end feel.
+- **SEO Ready**: Semantic HTML5 structure with comprehensive Meta/OpenGraph tags for maximum search visibility.
 
-- **Premium UI/UX**: Designed with a focus on luxury and professionalism.
-- **Dynamic Animations**: Utilizing Framer Motion and GSAP for sophisticated, smooth interactions.
-- **Mobile First**: Fully responsive design optimized for all devices.
-- **High Performance**: Built on Vite and React 19 for lightning-fast load times.
-- **Modern Tech Stack**: TypeScript, Tailwind CSS, and Radix UI primitives.
+## 🛠️ Technical Stack
+- **Frontend**: React 19 + TypeScript
+- **Styling**: Tailwind CSS (Mobile-First Utility architecture)
+- **Animations**: GSAP (GreenSock) + ScrollTrigger
+- **Icons**: Lucide React
+- **Standard**: Prettier/ESLint Production-Grade Configuration
 
-## 🛠 Tech Stack
+## 📱 Responsive Strategy
+The project follows a strict mobile-first approach:
+1. **Vertical Stacking**: All absolute positioning from legacy drafts has been replaced by CSS Grid/Flexbox layouts that adapt based on the viewport.
+2. **Touch Targets**: Minimum 48x48px interactive surfaces for mobile usability.
+3. **Bandwidth Efficiency**: Lazy-loading implemented for all non-critical images.
 
-- **Framework**: [React 19](https://react.dev/)
-- **Build Tool**: [Vite 7](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [GSAP](https://greensock.com/gsap/) & [Framer Motion](https://www.framer.com/motion/)
-- **Components**: [Radix UI](https://www.radix-ui.com/)
-- **Validation**: [Zod](https://zod.dev/) & [React Hook Form](https://react-hook-form.com/)
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (Latest LTS recommended)
-- npm or pnpm
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Ismail-Khan-Dev/josiah-sons-plumbing.git
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-### Building for Production
-
-To create a production build:
+## 🏗️ Getting Started
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
 npm run build
 ```
 
-## 📐 Project Structure
-
-- `src/components`: Reusable UI components.
-- `src/styles`: Global CSS and Tailwind configurations.
-- `public`: Static assets (images, fonts).
-
-## 📄 License
-
-This project is private and proprietary. All rights reserved by Josiah & Sons Plumbers.
-
----
-
-*Crafted with excellence by the Josiah & Sons Digital Team.*
+## 📜 License
+© 2026 Josiah & Sons Plumbing. Built with excellence in Houston, TX.
