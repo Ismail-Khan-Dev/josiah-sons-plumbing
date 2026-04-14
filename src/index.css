@@ -1,0 +1,174 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 35% 8%;
+    --foreground: 220 20% 97%;
+    --card: 222 35% 8%;
+    --card-foreground: 220 20% 97%;
+    --popover: 222 35% 8%;
+    --popover-foreground: 220 20% 97%;
+    --primary: 42 55% 57%;
+    --primary-foreground: 222 35% 8%;
+    --secondary: 220 20% 97%;
+    --secondary-foreground: 222 35% 8%;
+    --muted: 222 25% 15%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 42 55% 57%;
+    --accent-foreground: 222 35% 8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 42 55% 57%;
+    --input: 222 25% 20%;
+    --ring: 42 55% 57%;
+    --radius: 0.25rem;
+    
+    /* Custom Colors */
+    --navy: #0B0F1C;
+    --navy-light: #141B2D;
+    --gold: #D4A24F;
+    --gold-light: #E8C87A;
+    --cloud: #F4F6FA;
+    --cloud-dark: #E8EBF2;
+    --text-primary: #F4F6FA;
+    --text-secondary: rgba(244,246,250,0.72);
+    --text-dark: #0B0F1C;
+    --text-dark-secondary: rgba(11,15,28,0.62);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0B0F1C] text-[#F4F6FA] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-gold {
+    color: var(--gold);
+  }
+  
+  .bg-navy {
+    background-color: var(--navy);
+  }
+  
+  .bg-cloud {
+    background-color: var(--cloud);
+  }
+  
+  .border-gold {
+    border-color: var(--gold);
+  }
+  
+  .gold-rule {
+    height: 1px;
+    background-color: var(--gold);
+  }
+  
+  .label-uppercase {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  
+  .image-frame {
+    position: relative;
+    border: 1px solid var(--gold);
+  }
+  
+  .image-frame::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--gold);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  
+  .card-dark {
+    background-color: rgba(11, 15, 28, 0.85);
+    border: 1px solid var(--gold);
+  }
+  
+  .btn-primary {
+    @apply px-8 py-4 bg-[#D4A24F] text-[#0B0F1C] font-semibold text-sm tracking-wide transition-all duration-300;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-[#E8C87A] scale-[1.02];
+  }
+  
+  .btn-ghost {
+    @apply px-8 py-4 border border-[#D4A24F] text-[#D4A24F] font-semibold text-sm tracking-wide transition-all duration-300;
+  }
+  
+  .btn-ghost:hover {
+    @apply bg-[#D4A24F] text-[#0B0F1C];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--gold);
+  color: var(--navy);
+}
